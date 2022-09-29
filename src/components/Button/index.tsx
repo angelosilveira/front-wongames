@@ -10,12 +10,14 @@ export type ButtonProps = {
   fullWidth?: boolean
   icon?: JSX.Element
   as?: React.ElementType
+  minimal?: boolean
 } & ButtonTypes
 
 const Button = ({
   children,
   size = 'medium',
   fullWidth = false,
+  minimal = false,
   icon,
   as,
   ...props
@@ -25,6 +27,7 @@ const Button = ({
     size={size}
     fullWidth={fullWidth}
     hasIcon={!!icon}
+    minimal={minimal}
     {...props}
   >
     {!!icon && icon}
