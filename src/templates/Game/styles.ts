@@ -6,7 +6,7 @@ import { Container } from 'components/Container'
 export const Main = styled.main`
   margin-top: 20rem;
   ${media.greaterThan('medium')`
-    margin-top: 58rem;
+    margin-top: 45rem;
   `}
 `
 
@@ -49,3 +49,14 @@ export const SectionGallery = styled(Section)`
     display: block;
   `}
 `
+export const SectionDescription = styled(Section)`
+  ${({ theme }) => css`
+    .description__copyrights {
+      color: ${theme.colors.gray};
+      font-size: ${theme.font.sizes.xsmall};
+      margin-top: ${theme.spacings.medium};
+    }
+  `}
+`
+
+export const SectionGameDetails = styled(Section)``
